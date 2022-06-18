@@ -21659,30 +21659,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 
 
- // export default {
-//       name: 'Autoplay',
-//     components:{
-//         AppLayout,
-//         Slider,
-//         Carousel,
-//         Slide,
-//         Link,
-//         Pagination,
-//         Navigation,    
-//     },
-//     props:{
-//         itemsToShow: Number,
-//         wrapAround: Boolean,
-//     },
-//     data(){
-//         return{
-//             trabajos : 1,
-//         }
-//     }
-// }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'Breakpoints',
   components: {
     Carousel: vue3_carousel__WEBPACK_IMPORTED_MODULE_1__.Carousel,
     Slide: vue3_carousel__WEBPACK_IMPORTED_MODULE_1__.Slide,
@@ -21690,17 +21668,30 @@ __webpack_require__.r(__webpack_exports__);
     Pagination: vue3_carousel__WEBPACK_IMPORTED_MODULE_1__.Pagination,
     Navigation: vue3_carousel__WEBPACK_IMPORTED_MODULE_1__.Navigation
   },
+  props: {
+    itemsToShow: Number,
+    itemsToScroll: Number,
+    snapAlign: String
+  },
   data: function data() {
     return {
       // carousel settings
       settings: {
-        itemsToShow: 1,
+        itemsToShow: 4,
         snapAlign: 'center'
       },
       // breakpoints are mobile first
       // any settings not specified will fallback to the carousel settings
       breakpoints: {
         // 700px and up
+        100: {
+          itemsToShow: 1,
+          snapAlign: 'center'
+        },
+        300: {
+          itemsToShow: 2,
+          snapAlign: 'center'
+        },
         700: {
           itemsToShow: 4,
           snapAlign: 'center'
@@ -22082,7 +22073,7 @@ var _hoisted_1 = {
   "class": "min-h-screen bg-gray-100"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<header class=\"bg-black sticky top-0\" style=\"z-index:900;\"><div class=\"container flex items-center justify-between h-24\"><!-- logo --><div><!-- &lt;Link class=&quot;text-white&quot; :href=&quot;route(&#39;home&#39;)&quot;&gt; \r\n\t\t\t\t\t&lt;p class=&quot;items-center justify-center text-4xl font-extrabold rounded-full p-2 &quot;&gt;\r\n\t\t\t\t\t\t| JC |\r\n\t\t\t\t\t&lt;/p&gt;\t --><!-- &lt;i class=&quot;fas fa-home text-2xl text-white&quot;&gt;&lt;/i&gt; --><!-- &lt;/Link&gt; --><a class=\"text-white\" href=\"#home\"><p class=\"items-center justify-center text-4xl font-extrabold rounded-full p-2\"> | JC | </p></a></div><div><!-- &lt;ResponsiveNavLink :active=&quot;route().current(&#39;sobre_mi&#39;)&quot; :href=&quot;route(&#39;sobre_mi&#39;)&quot;  class=&quot;text-sm text-gray-400 hover:text-white mr-3 md:text-md lg:text-lg&quot; &gt;\r\n\t\t\t\t\t\t\t\tSobre mi\r\n\t\t\t\t\t\t&lt;/ResponsiveNavLink&gt;\r\n\t\t\t\t\t\t&lt;ResponsiveNavLink :active=&quot;route().current(&#39;portafolio&#39;)&quot; :href=&quot;route(&#39;portafolio&#39;)&quot; class=&quot;text-sm hover:text-white mr-3 md:text-md lg:text-lg text-gray-400&quot;&gt;\r\n\t\t\t\t\t\t\t\tPortafolio web\r\n\t\t\t\t\t\t&lt;/ResponsiveNavLink&gt; \r\n\t\t\t\t\t\t&lt;ResponsiveNavLink :active=&quot;route().current(&#39;contacto&#39;)&quot; :href=&quot;route(&#39;contacto&#39;)&quot; class=&quot;text-sm hover:text-white md:text-md lg:text-lg text-gray-400&quot;&gt;\r\n\t\t\t\t\t\t\t\tContacto\r\n\t\t\t\t\t\t&lt;/ResponsiveNavLink&gt; --><a href=\"#sobre_mi\" class=\"text-sm text-gray-400 hover:text-white mr-3 md:text-md lg:text-lg\"> Sobre mi </a><a href=\"#portafolio_web\" class=\"text-sm hover:text-white mr-3 md:text-md lg:text-lg text-gray-400\"> Portafolio web </a><a href=\"#contacto\" class=\"text-sm hover:text-white mr-3 md:text-md lg:text-lg text-gray-400\"> Contacto </a></div></div></header>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<header class=\"bg-black sticky top-0\" style=\"z-index:900;\"><div class=\"container flex items-center justify-between h-24\"><!-- logo --><div><a class=\"text-white\" href=\"#home\"><p class=\"items-center justify-center text-4xl font-extrabold rounded-full p-2\"> | JC | </p></a></div><div><a href=\"#sobre_mi\" class=\"text-sm text-gray-400 hover:text-white mr-3 md:text-md lg:text-lg\"> Sobre mi </a><a href=\"#portafolio_web\" class=\"text-sm hover:text-white mr-3 md:text-md lg:text-lg text-gray-400\"> Portafolio web </a><a href=\"#contacto\" class=\"text-sm hover:text-white mr-3 md:text-md lg:text-lg text-gray-400\"> Contacto </a></div></div></header>", 1);
 
 var _hoisted_3 = {
   key: 0,
@@ -22317,10 +22308,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "container pt-16"
+  "class": "container pt-20"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\"><div class=\"w-full h-full\"><figure><img class=\"object-cover rounded shadow-lg transform hover:scale-105 transition ease-out duration-500\" src=\"/img/foto_sobre_mi.jpg\" alt=\"\"></figure></div><div class=\"bg-white rounded shadow-lg p-2\"><div class=\"p-2 flex items-center\"><span class=\"flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2\"><i class=\"fas fa-laptop-code text-2xl text-white\"></i></span><div class=\"ml-4\"><p class=\"text-lg font-semibold text-greenLime-600 mb-4\">Desarrollador web</p><div class=\"justify-between\"><p class=\"text-gray-800 text-md text-justify mb-2\"> Soy ingeniero de sistemas, con conocimientos y experiencia en el desarrollo de aplicaciones web. Las tecnologias que utilizo para mis desarrollos son las siguientes: <br><br> -Lenguaje backend : PHP. <br> -Lenguaje Fronted: Javascript. <br> -Framework Backend: Laravel. <br> -Framework Fronted: Vuejs y Livewire con Alpine js. <br> -Librerias de estilos css: Bootstrap y Tailwind css. <br> -Sistema de gestion de bases de datos: Mysql. <br></p></div></div></div><hr><div class=\"p-2 flex items-center\"><span class=\"flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2\"><i class=\"fas fa-graduation-cap text-2xl text-white\"></i></span><div class=\"ml-4\"><p class=\"text-lg font-semibold text-greenLime-600 mb-4\">Educación</p><div class=\"ml-2 flex justify-between\"><p class=\"text-gray-600\"> 2005/2010 </p><div class=\"ml-5\"><p class=\"text-gray-800 font-semibold text-md\"> Universidad Experimental de las Fuerzas Armadas Nacional (UNEFA) </p><p class=\"text-gray-600 text-sm mb-2\"> Ingenieria de Sistemas </p></div></div></div></div><hr><div class=\"p-2 flex items-center\"><span class=\"flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2\"><i class=\"fas fa-briefcase text-2xl text-white\"></i></span><div class=\"ml-4\"><p class=\"text-lg font-semibold text-greenLime-600 mb-4\">Experiencia laboral</p><div class=\"ml-2 flex justify-between\"><p class=\"text-gray-600\"> 2010/2019 </p><div class=\"ml-5\"><p class=\"text-gray-800 font-semibold text-md\"> Analista de transmisión y control de la plataforma - PDVSA, El Tigre. Edo. Anzoátegui </p><p class=\"text-gray-600 text-sm text-justify mb-2\"> -Soporte en sitio a los usuarios a nivel de hardware y software.<br> -Transmisión y control de la plataforma informática operada en la empresa.<br> -Aplicación de conocimientos de técnicas contemporáneas computacionales y analíticas para la construcción y evaluación de soluciones informáticas, abarcando las tareas de construcción, pruebas y documentación, integrando distintas tecnologías. </p></div></div></div></div><hr><div class=\"p-2 flex items-center\"><span class=\"flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2\"><i class=\"fas fa-book-reader text-2xl text-white\"></i></span><div class=\"ml-4\"><p class=\"text-lg font-semibold text-greenLime-600 mb-4\">Cursos técnicos</p><div class=\"grid grid-cols-2 gap-6 mb-3\"><p class=\"text-gray-600 text-justify\"> Redes básicas bajo windows </p><div><p class=\"text-gray-800 font-semibold text-md\"> Centro Superior de Estudios. El Tigre, edo. Anzoátegui </p><p class=\"text-gray-600 text-sm mb-2\"> Duración 18 hrs. </p></div></div><div class=\"grid grid-cols-2 gap-6 mb-3\"><p class=\"text-gray-600 text-justify\"> Fundamentos de Linux </p><div><p class=\"text-gray-800 font-semibold text-md\"> Maedca gts </p></div></div><div class=\"grid grid-cols-2 gap-6 mb-3\"><p class=\"text-gray-600 text-justify\"> Calidad de servicio y atención al usuario </p><div><p class=\"text-gray-800 font-semibold text-md\"> FundExprof </p><p class=\"text-gray-600 text-sm mb-2\"> Duración 16 hrs. </p></div></div><div class=\"grid grid-cols-2 gap-6 mb-3\"><p class=\"text-gray-600 text-justify\"> CCNA Exploration. Network Fundamentals </p><div><p class=\"text-gray-800 font-semibold text-md\"> Cisco Networking Academy </p></div></div><div class=\"grid grid-cols-2 gap-6 mb-3\"><p class=\"text-gray-600 text-justify\"> Reparación y mantenimiento de computadoras </p><div><p class=\"text-gray-800 font-semibold text-md\"> Ceoca </p></div></div><div class=\"grid grid-cols-2 gap-6 mb-3\"><p class=\"text-gray-600 text-justify\"> Administración de Zimbra </p><div><p class=\"text-gray-800 font-semibold text-md\"> Centec </p><p class=\"text-gray-600 text-sm mb-2\"> Duración 40 hrs. </p></div></div><div class=\"grid grid-cols-2 gap-6 mb-3\"><p class=\"text-gray-600 text-justify\"> Administración integrada de Linux y virtualización XEN </p><div><p class=\"text-gray-800 font-semibold text-md\"> Centec </p><p class=\"text-gray-600 text-sm mb-2\"> Duración 40 hrs. </p></div></div><div class=\"grid grid-cols-2 gap-6 mb-3\"><p class=\"text-gray-600 text-justify\"> mantenimiento de computadores de escritorio y laptop, Nivel 3 </p><div><p class=\"text-gray-800 font-semibold text-md\"> Centec </p><p class=\"text-gray-600 text-sm mb-2\"> Duración 40 hrs. </p></div></div></div></div></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\"><div class=\"w-full h-full\"><figure><img class=\"object-cover rounded shadow-lg transform hover:scale-105 transition ease-out duration-500\" src=\"/img/foto_sobre_mi.jpg\" alt=\"\"></figure></div><div class=\"bg-white rounded shadow-lg p-2\"><div class=\"p-2 flex items-center\"><div class=\"ml-4 mt-3\"><div class=\"justify-between\"><p class=\"text-green-800 text-justify text-xl mb-2\"> Soy Ingeniero de Sistemas, con experiencia en diseño, desarrollo, instalación, pruebas y mantenimiento de aplicaciones web. Las tecnologias y/o lenguajes que actualmente utilizo son PHP, Javascript, Laravel, Vuejs, Livewire con Alpine js, Bootstrap, Tailwind css, y sistemas de gestión de base de datos como Mysql. </p><br><p class=\"text-green-800 text-justify text-xl mb-2\"> Me encuentro constantemente investigando, y practicando nuevas tecnologías a fin de ampliar mis conocimientos. Me considero una persona proactiva, perseverante, ordenada, metódica, y con disposición para la comunicación y el trabajo en equipo. </p></div></div></div><!-- &lt;hr&gt;\r\n                    &lt;div class=&quot;p-2 flex items-center&quot;&gt;\r\n                            &lt;span class=&quot;flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2&quot;&gt;\r\n                                &lt;i class=&quot;fas fa-graduation-cap text-2xl text-white&quot;&gt;&lt;/i&gt;\r\n                            &lt;/span&gt;\r\n                            \r\n                            &lt;div class=&quot;ml-4&quot;&gt;\r\n                                &lt;p class=&quot;text-lg font-semibold text-greenLime-600 mb-4&quot;&gt;Educación&lt;/p&gt;\r\n                                &lt;div class=&quot;ml-2 flex justify-between&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600&quot;&gt;\r\n                                        2005/2010\r\n                                    &lt;/p&gt;\r\n                                    &lt;div class=&quot;ml-5&quot;&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Universidad Experimental de las Fuerzas Armadas Nacional (UNEFA)\r\n                                        &lt;/p&gt;\r\n                                        &lt;p class=&quot;text-gray-600 text-sm mb-2&quot;&gt;\r\n                                            Ingenieria de Sistemas\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                    \r\n                                &lt;/div&gt;\r\n                            &lt;/div&gt;\r\n                    &lt;/div&gt;\r\n\r\n                    &lt;hr&gt; --><!-- &lt;div class=&quot;p-2 flex items-center&quot;&gt;\r\n                            &lt;span class=&quot;flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2&quot;&gt;\r\n                                &lt;i class=&quot;fas fa-briefcase text-2xl text-white&quot;&gt;&lt;/i&gt;\r\n                            &lt;/span&gt;\r\n                            \r\n                            &lt;div class=&quot;ml-4&quot;&gt;\r\n                                &lt;p class=&quot;text-lg font-semibold text-greenLime-600 mb-4&quot;&gt;Experiencia laboral&lt;/p&gt;\r\n                                &lt;div class=&quot;ml-2 flex justify-between&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600&quot;&gt;\r\n                                        2010/2019\r\n                                    &lt;/p&gt;\r\n                                    &lt;div class=&quot;ml-5&quot;&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Analista de transmisión y control de la plataforma - PDVSA, El Tigre. Edo. Anzoátegui\r\n                                        &lt;/p&gt;\r\n                                        &lt;p class=&quot;text-gray-600 text-sm text-justify mb-2&quot;&gt;\r\n                                            -Soporte en sitio a los usuarios a nivel de hardware y software.&lt;br&gt;\r\n                                            -Transmisión y control de la plataforma informática operada en la empresa.&lt;br&gt;\r\n                                            -Aplicación de conocimientos de técnicas contemporáneas computacionales y analíticas para la construcción y evaluación de soluciones informáticas, abarcando las tareas de construcción, pruebas y documentación, integrando distintas tecnologías.\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                    \r\n                                &lt;/div&gt;\r\n                            &lt;/div&gt;\r\n                    &lt;/div&gt;\r\n                    &lt;hr&gt; --><!-- &lt;div class=&quot;p-2 flex items-center&quot;&gt;\r\n                            &lt;span class=&quot;flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2&quot;&gt;\r\n                                &lt;i class=&quot;fas fa-book-reader text-2xl text-white&quot;&gt;&lt;/i&gt;\r\n                            &lt;/span&gt;\r\n                            \r\n                            &lt;div class=&quot;ml-4&quot;&gt;\r\n                                &lt;p class=&quot;text-lg font-semibold text-greenLime-600 mb-4&quot;&gt;Cursos técnicos&lt;/p&gt;\r\n                                &lt;div class=&quot;grid grid-cols-2 gap-6 mb-3&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600 text-justify&quot;&gt;\r\n                                        Redes básicas bajo windows\r\n                                    &lt;/p&gt;\r\n                                    &lt;div&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Centro Superior de Estudios. El Tigre, edo. Anzoátegui\r\n                                        &lt;/p&gt;\r\n                                        &lt;p class=&quot;text-gray-600 text-sm mb-2&quot;&gt;\r\n                                            Duración 18 hrs.\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                &lt;/div&gt;\r\n                                 &lt;div class=&quot;grid grid-cols-2 gap-6 mb-3&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600 text-justify&quot;&gt;\r\n                                        Fundamentos de Linux\r\n                                    &lt;/p&gt;\r\n                                    &lt;div&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Maedca gts\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                 &lt;/div&gt;\r\n\r\n                                &lt;div class=&quot;grid grid-cols-2 gap-6 mb-3&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600 text-justify&quot;&gt;\r\n                                        Calidad de servicio y atención al usuario\r\n                                    &lt;/p&gt;\r\n                                    &lt;div&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        FundExprof\r\n                                        &lt;/p&gt;\r\n                                        &lt;p class=&quot;text-gray-600 text-sm mb-2&quot;&gt;\r\n                                            Duración 16 hrs.\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                &lt;/div&gt;\r\n\r\n                                &lt;div class=&quot;grid grid-cols-2 gap-6 mb-3&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600 text-justify&quot;&gt;\r\n                                        CCNA Exploration. Network Fundamentals\r\n                                    &lt;/p&gt;\r\n                                    &lt;div&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Cisco Networking Academy\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                &lt;/div&gt;\r\n\r\n                                &lt;div class=&quot;grid grid-cols-2 gap-6 mb-3&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600 text-justify&quot;&gt;\r\n                                        Reparación y mantenimiento de computadoras\r\n                                    &lt;/p&gt;\r\n                                    &lt;div&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Ceoca\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                &lt;/div&gt;\r\n\r\n                                &lt;div class=&quot;grid grid-cols-2 gap-6 mb-3&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600 text-justify&quot;&gt;\r\n                                        Administración de Zimbra\r\n                                    &lt;/p&gt;\r\n                                    &lt;div&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Centec\r\n                                        &lt;/p&gt;\r\n                                        &lt;p class=&quot;text-gray-600 text-sm mb-2&quot;&gt;\r\n                                            Duración 40 hrs.\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                &lt;/div&gt;\r\n\r\n                                &lt;div class=&quot;grid grid-cols-2 gap-6 mb-3&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600 text-justify&quot;&gt;\r\n                                        Administración integrada de Linux y virtualización XEN\r\n                                    &lt;/p&gt;\r\n                                    &lt;div&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Centec\r\n                                        &lt;/p&gt;\r\n                                        &lt;p class=&quot;text-gray-600 text-sm mb-2&quot;&gt;\r\n                                            Duración 40 hrs.\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                &lt;/div&gt;\r\n\r\n                                &lt;div class=&quot;grid grid-cols-2 gap-6 mb-3&quot;&gt;\r\n                                    &lt;p class=&quot;text-gray-600 text-justify&quot;&gt;\r\n                                        mantenimiento de computadores de escritorio y laptop, Nivel 3\r\n                                    &lt;/p&gt;\r\n                                    &lt;div&gt;\r\n                                        &lt;p class=&quot;text-gray-800 font-semibold text-md&quot;&gt;\r\n                                        Centec\r\n                                        &lt;/p&gt;\r\n                                        &lt;p class=&quot;text-gray-600 text-sm mb-2&quot;&gt;\r\n                                            Duración 40 hrs.\r\n                                        &lt;/p&gt;\r\n                                    &lt;/div&gt;\r\n                                &lt;/div&gt;\r\n\r\n                            &lt;/div&gt;\r\n                    &lt;/div&gt; --></div></div>", 1);
 
 var _hoisted_3 = [_hoisted_2];
 function render(_ctx, _cache) {
@@ -22358,14 +22349,14 @@ var _hoisted_3 = {
   "class": "mt-4 mb-20"
 };
 var _hoisted_4 = {
-  "class": "mr-2 w-52 h-72 carousel__item"
+  "class": "w-full h-64 carousel__item"
 };
 var _hoisted_5 = {
-  "class": "bg-white rounded-lg shadow"
+  "class": "bg-white rounded-lg"
 };
 var _hoisted_6 = {
   key: 0,
-  "class": "pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500"
+  "class": "p-5 transform hover:scale-110 transition ease-out duration-500"
 };
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("figure", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -22380,7 +22371,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 
 var _hoisted_9 = {
   key: 1,
-  "class": "pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500"
+  "class": "p-5 transform hover:scale-110 transition ease-out duration-500"
 };
 
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("figure", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -22395,7 +22386,7 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 
 var _hoisted_12 = {
   key: 2,
-  "class": "pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500"
+  "class": "p-5 transform hover:scale-110 transition ease-out duration-500"
 };
 
 var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("figure", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -22410,7 +22401,7 @@ var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 
 var _hoisted_15 = {
   key: 3,
-  "class": "pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500"
+  "class": "p-5 transform hover:scale-110 transition ease-out duration-500"
 };
 
 var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("figure", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -22425,7 +22416,7 @@ var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 
 var _hoisted_18 = {
   key: 4,
-  "class": "pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500"
+  "class": "p-5 transform hover:scale-110 transition ease-out duration-500"
 };
 
 var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("figure", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -22445,6 +22436,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_Navigation = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Navigation");
 
+  var _component_pagination = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("pagination");
+
   var _component_carousel = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("carousel");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_carousel, {
@@ -22455,7 +22448,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     addons: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Navigation, {
         "class": "m-8"
-      })];
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pagination)];
     }),
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(5, function (trabajos) {
@@ -22463,60 +22456,60 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           key: trabajos
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-            return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_5, [trabajos == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+            return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_5, [trabajos == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
               href: _ctx.route('ventas'),
               "class": "text-sm md:text-md lg:text-md font-semibold text-gray-700"
             }, {
               "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-                return [_hoisted_8];
+                return [_hoisted_7, _hoisted_8];
               }),
               _: 1
               /* STABLE */
 
             }, 8
             /* PROPS */
-            , ["href"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" transform hover:scale-110 transition ease-out duration-500 "), trabajos == 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+            , ["href"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), trabajos == 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
               href: _ctx.route('actOperacional'),
               "class": "text-sm md:text-md lg:text-md font-semibold text-gray-700"
             }, {
               "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-                return [_hoisted_11];
+                return [_hoisted_10, _hoisted_11];
               }),
               _: 1
               /* STABLE */
 
             }, 8
             /* PROPS */
-            , ["href"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), trabajos == 3 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+            , ["href"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), trabajos == 3 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
               href: _ctx.route('blog'),
               "class": "text-sm md:text-md lg:text-md font-semibold text-gray-700"
             }, {
               "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-                return [_hoisted_14];
+                return [_hoisted_13, _hoisted_14];
               }),
               _: 1
               /* STABLE */
 
             }, 8
             /* PROPS */
-            , ["href"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), trabajos == 4 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+            , ["href"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), trabajos == 4 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
               href: _ctx.route('negocios'),
               "class": "text-sm md:text-md lg:text-md font-semibold text-gray-700"
             }, {
               "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-                return [_hoisted_17];
+                return [_hoisted_16, _hoisted_17];
               }),
               _: 1
               /* STABLE */
 
             }, 8
             /* PROPS */
-            , ["href"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), trabajos == 5 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+            , ["href"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), trabajos == 5 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
               href: _ctx.route('ecommerce'),
               "class": "text-sm md:text-md lg:text-md font-semibold text-gray-700"
             }, {
               "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-                return [_hoisted_20];
+                return [_hoisted_19, _hoisted_20];
               }),
               _: 1
               /* STABLE */
@@ -23009,7 +23002,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".carousel {\n  position: relative;\n  text-align: center;\n  box-sizing: border-box;\n}\n\n.carousel * {\n  box-sizing: border-box;\n}\n\n.carousel__track {\n  display: flex;\n  margin: 0;\n  padding: 0;\n  position: relative;\n}\n\n.carousel__viewport {\n  overflow: hidden;\n}\n:root {\n  /* Color */\n  --vc-clr-primary: #642afb;\n  --vc-clr-secondary: #8e98f3;\n  --vc-clr-white: #ffffff;\n\n  /* Icon */\n  --vc-icn-width: 1.2em;\n\n  /* Navigation */\n  --vc-nav-width: 30px;\n  --vc-nav-color: #ffffff;\n  --vc-nav-background-color: var(--vc-clr-primary);\n\n  /* Pagination */\n  --vc-pgn-width: 10px;\n  --vc-pgn-height: 5px;\n  --vc-pgn-margin: 5px;\n  --vc-pgn-border-radius: 0;\n  --vc-pgn-background-color: var(--vc-clr-secondary);\n  --vc-pgn-active-color: var(--vc-clr-primary);\n}\n.carousel__slide {\n  scroll-snap-stop: auto;\n  \n  margin: 0;\n  position: relative;\n  \n  justify-content: center;\n  align-items: center;\n}\n.carousel__icon {\n  width: var(--vc-icn-width);\n  height: var(--vc-icn-width);\n  fill: currentColor;\n}\n.carousel__pagination {\n  display: flex;\n  justify-content: center;\n  list-style: none;\n}\n.carousel__pagination-button {\n  margin: var(--vc-pgn-margin);\n  width: var(--vc-pgn-width);\n  height: var(--vc-pgn-height);\n  border-radius: var(--vc-pgn-height);\n  border: 0;\n  cursor: pointer;\n  background-color: var(--vc-pgn-background-color);\n}\n\n.carousel__pagination-button--active {\n  background-color: var(--vc-pgn-active-color);\n}\n.carousel__prev,\n.carousel__next {\n  background-color: var(--vc-nav-background-color);\n  border-radius: var(--vc-nav-width);\n  width: var(--vc-nav-width);\n  height: var(--vc-nav-width);\n  text-align: center;\n  font-size: calc(var(--vc-nav-width) * 2 / 3);\n  padding: 0;\n  color: var(--vc-nav-color);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  border: 0;\n  cursor: pointer;\n}\n\n.carousel__prev {\n  top: 50%;\n  left: 0;\n  transform: translate(-50%, -50%);\n}\n\n.carousel__next {\n  top: 50%;\n  right: 0;\n  transform: translate(50%, -50%);\n}\n\n.carousel--rtl .carousel__prev {\n  left: auto;\n  right: 0;\n  transform: translate(50%, -50%);\n}\n\n.carousel--rtl .carousel__next {\n  right: auto;\n  left: 0;\n  transform: translate(-50%, -50%);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".carousel__prev,\n.carousel__next {\n  background-color: var(--vc-nav-background-color);\n  border-radius: var(--vc-nav-width);\n  width: var(--vc-nav-width);\n  height: var(--vc-nav-width);\n  text-align: center;\n  font-size: calc(var(--vc-nav-width) * 2 / 3);\n  padding: 0;\n  color: var(--vc-nav-color);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  border: 0;\n  cursor: pointer;\n}\n\n.carousel__prev {\n  top: 50%;\n  left: 0;\n  transform: translate(-50%, -50%);\n}\n\n.carousel__next {\n  top: 50%;\n  right: 0;\n  transform: translate(50%, -50%);\n}\n\n.carousel--rtl .carousel__prev {\n  left: auto;\n  right: 0;\n  transform: translate(50%, -50%);\n}\n\n.carousel--rtl .carousel__next {\n  right: auto;\n  left: 0;\n  transform: translate(-50%, -50%);\n}\n:root {\n  /* Color */\n  --vc-clr-primary: #642afb;\n  --vc-clr-secondary: #8e98f3;\n  --vc-clr-white: #ffffff;\n\n  /* Icon */\n  --vc-icn-width: 1.2em;\n\n  /* Navigation */\n  --vc-nav-width: 30px;\n  --vc-nav-color: #ffffff;\n  --vc-nav-background-color: var(--vc-clr-primary);\n\n  /* Pagination */\n  --vc-pgn-width: 10px;\n  --vc-pgn-height: 5px;\n  --vc-pgn-margin: 5px;\n  --vc-pgn-border-radius: 0;\n  --vc-pgn-background-color: var(--vc-clr-secondary);\n  --vc-pgn-active-color: var(--vc-clr-primary);\n}\n.carousel__icon {\n  width: var(--vc-icn-width);\n  height: var(--vc-icn-width);\n  fill: currentColor;\n}\n.carousel {\n  position: relative;\n  text-align: center;\n  box-sizing: border-box;\n}\n\n.carousel * {\n  box-sizing: border-box;\n}\n\n.carousel__track {\n  display: flex;\n  margin: 0;\n  padding: 0;\n  position: relative;\n}\n\n.carousel__viewport {\n  overflow: hidden;\n}\n.carousel__pagination {\n  display: flex;\n  justify-content: center;\n  list-style: none;\n}\n.carousel__pagination-button {\n  margin: var(--vc-pgn-margin);\n  width: var(--vc-pgn-width);\n  height: var(--vc-pgn-height);\n  border-radius: var(--vc-pgn-height);\n  border: 0;\n  cursor: pointer;\n  background-color: var(--vc-pgn-background-color);\n}\n\n.carousel__pagination-button--active {\n  background-color: var(--vc-pgn-active-color);\n}\n.carousel__slide {\n  scroll-snap-stop: auto;\n  flex-shrink: 0;\n  margin: 0;\n  position: relative;\n\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23033,7 +23026,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n:root {\r\n     --vc-clr-primary: rgba(72, 90, 72, 0.301);\n}\n.carousel__slide > .carousel__item {\r\n  transform: scale(1);\r\n\r\n  transition: 0.5s;\n}\n.carousel__slide--visible > .carousel__item {\r\n  opacity: 1;\r\n  transform: rotateY(0);\n}\n.carousel__slide--next > .carousel__item {\r\n  transform: scale(0.9) translate(-10px);\n}\n.carousel__slide--prev > .carousel__item {\r\n  transform: scale(0.9) translate(10px);\n}\n.carousel__slide--active > .carousel__item {\r\n  transform: scale(1.1);\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n:root {\r\n     --vc-clr-primary: rgba(200, 202, 200, 0.301);\r\n      --vc-clr-white: rgba(234, 238, 234, 0.301);\n}\n.carousel__item {\r\n  min-height: 200px;\r\n  width: 100%;\r\n  background-color: var(--vc-clr-primary);\r\n  color:  var(--vc-clr-white);\r\n  font-size: 20px;\r\n  border-radius: 8px;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.carousel__slide {\r\n  padding: 10px;\n}\n.carousel__prev,\r\n.carousel__next {\r\n  box-sizing: content-box;\r\n  border: 5px solid white;\n}\n.carousel__slide > .carousel__item {\r\n  transform: scale(1);\r\n\r\n  transition: 0.5s;\n}\n.carousel__slide--visible > .carousel__item {\r\n  opacity: 1;\r\n  transform: rotateY(0);\n}\n.carousel__slide--next > .carousel__item {\r\n  transform: scale(0.9) translate(-10px);\n}\n.carousel__slide--prev > .carousel__item {\r\n  transform: scale(0.9) translate(10px);\n}\n.carousel__slide--active > .carousel__item {\r\n  transform: scale(1.1);\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

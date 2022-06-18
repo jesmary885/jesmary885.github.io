@@ -3,33 +3,8 @@ import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 
-// export default {
-//       name: 'Autoplay',
-
-//     components:{
-//         AppLayout,
-//         Slider,
-//         Carousel,
-//         Slide,
-//         Link,
-//         Pagination,
-//         Navigation,    
-//     },
-//     props:{
-//         itemsToShow: Number,
-//         wrapAround: Boolean,
-//     },
-//     data(){
-//         return{
-//             trabajos : 1,
-//         }
-//     }
-
-// }
 
 export default({
-  name: 'Breakpoints',
- 
   components: {
         Carousel,
         Slide,
@@ -37,35 +12,74 @@ export default({
         Pagination,
         Navigation,    
   },
+
+  props: {
+      itemsToShow: Number,
+      itemsToScroll: Number,
+      snapAlign: String,
+    },
+
   data: () => ({
     // carousel settings
-    settings: {
-      itemsToShow: 1,
+      settings: {
+      itemsToShow: 4,
       snapAlign: 'center',
-
     },
+    
     // breakpoints are mobile first
     // any settings not specified will fallback to the carousel settings
     breakpoints: {
       // 700px and up
+       100: {
+        itemsToShow: 1,
+        snapAlign: 'center',
+      },
+      300: {
+        itemsToShow: 2,
+        snapAlign: 'center',
+      },
+  
       700: {
-    
         itemsToShow: 4,
         snapAlign: 'center',
-     
       },
      
     },
   }),
+
+
 });
 
 </script>
 
-<style>
 
-:root {
-     --vc-clr-primary: rgba(72, 90, 72, 0.301);
+<style>
+ :root {
+     --vc-clr-primary: rgba(200, 202, 200, 0.301);
+      --vc-clr-white: rgba(234, 238, 234, 0.301);
   }
+
+  .carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: var(--vc-clr-primary);
+  color:  var(--vc-clr-white);
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide {
+  padding: 10px;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 5px solid white;
+}
 
   .carousel__slide > .carousel__item {
   transform: scale(1);
@@ -102,55 +116,65 @@ export default({
 
       <slide v-for="trabajos in 5" :key="trabajos">
       
-        <ul class=" mr-2 w-52 h-72 carousel__item">
-          <li class="bg-white rounded-lg shadow">
+        <ul class="w-full h-64 carousel__item">
+          <li class="bg-white rounded-lg">
               
-            <article v-if="trabajos == 1" class="pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500">
+            <article v-if="trabajos == 1" class="p-5 transform hover:scale-110 transition ease-out duration-500">
+                <Link :href="route('ventas')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
                 <figure>
                   <img class="w-full h-48 object-cover object-center " src="/img/ventas.jpg" alt="">
                 </figure>
-                <Link :href="route('ventas')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
+                
                 Control de ventas e inventario
                 </Link>
             </article>
-<!-- transform hover:scale-110 transition ease-out duration-500 -->
-            <article v-if="trabajos == 2" class="pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500">
+
+            <article v-if="trabajos == 2" class="p-5 transform hover:scale-110 transition ease-out duration-500">
+                <Link :href="route('actOperacional')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
                 <figure>
                   <img class="w-full h-48 object-cover object-center " src="/img/control_actividades.png" alt="">
                 </figure>
-                <Link :href="route('actOperacional')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
+                
                 Control de actividades operacionales
                 </Link>
             </article>
-             <article v-if="trabajos == 3" class="pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500">
+
+             <article v-if="trabajos == 3" class="p-5 transform hover:scale-110 transition ease-out duration-500">
+                 <Link :href="route('blog')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
                 <figure>
                   <img class="w-full h-48 object-cover object-center " src="/img/blog.jpg" alt="">
                 </figure>
-                <Link :href="route('blog')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
+               
                 Blog administrable
                 </Link>
             </article>
-             <article v-if="trabajos == 4" class="pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500">
+
+             <article v-if="trabajos == 4" class="p-5 transform hover:scale-110 transition ease-out duration-500">
+                 <Link :href="route('negocios')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
                 <figure>
                   <img class="w-full h-48 object-cover object-center " src="/img/negocios.png" alt="">
                 </figure>
-                <Link :href="route('negocios')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
+               
                 Página web de negocios
                 </Link>
             </article>
-             <article v-if="trabajos == 5" class="pt-6 px-4 pb-16 h-full transform hover:scale-110 transition ease-out duration-500">
+
+             <article v-if="trabajos == 5" class="p-5 transform hover:scale-110 transition ease-out duration-500">
+                 <Link :href="route('ecommerce')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
                 <figure>
                   <img class="w-full h-48 object-cover object-center " src="/img/ecommerce.png" alt="">
                 </figure>
-                <Link :href="route('ecommerce')" class="text-sm md:text-md lg:text-md font-semibold text-gray-700">
+               
                 Página ecommerce
                 </Link>
             </article>
+
           </li>
         </ul>
       </slide>
        <template #addons>
            <Navigation class="m-8" />
+              <pagination />
     </template>
    
   </carousel>

@@ -19,4 +19,5 @@ class InformacionController extends Controller
     public function Contacto(){
         return Inertia::render('Info/Contacto');
     }
+
 }

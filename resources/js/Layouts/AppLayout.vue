@@ -45,12 +45,6 @@ export default {
 				<div class="container flex items-center justify-between h-24">
 					<!-- logo -->
 					<div>
-						<!-- <Link class="text-white" :href="route('home')"> 
-					<p class="items-center justify-center text-4xl font-extrabold rounded-full p-2 ">
-						| JC |
-					</p>	 -->
-							<!-- <i class="fas fa-home text-2xl text-white"></i> -->
-						<!-- </Link> -->
 						<a class="text-white" href="#home"> 
 							<p class="items-center justify-center text-4xl font-extrabold rounded-full p-2 ">
 								| JC |
@@ -58,15 +52,7 @@ export default {
 						</a>
 					</div>
 					<div>
-						<!-- <ResponsiveNavLink :active="route().current('sobre_mi')" :href="route('sobre_mi')"  class="text-sm text-gray-400 hover:text-white mr-3 md:text-md lg:text-lg" >
-								Sobre mi
-						</ResponsiveNavLink>
-						<ResponsiveNavLink :active="route().current('portafolio')" :href="route('portafolio')" class="text-sm hover:text-white mr-3 md:text-md lg:text-lg text-gray-400">
-								Portafolio web
-						</ResponsiveNavLink> 
-						<ResponsiveNavLink :active="route().current('contacto')" :href="route('contacto')" class="text-sm hover:text-white md:text-md lg:text-lg text-gray-400">
-								Contacto
-						</ResponsiveNavLink> -->
+			
 						<a href="#sobre_mi" class="text-sm text-gray-400 hover:text-white mr-3 md:text-md lg:text-lg" >
 								Sobre mi
 						</a>

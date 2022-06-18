@@ -5,7 +5,7 @@
 
 <template>
  
-        <div class="container pt-16 ">
+        <div class="container pt-20 ">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="w-full h-full">
                     <figure>
@@ -14,27 +14,24 @@
                 </div>
                 <div class="bg-white rounded shadow-lg p-2 ">
                      <div class="p-2 flex items-center">
-                            <span class="flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2">
-                                <i class="fas fa-laptop-code text-2xl text-white"></i>
-                            </span>
                             
-                            <div class="ml-4">
-                                <p class="text-lg font-semibold text-greenLime-600 mb-4">Desarrollador web</p>
+                            <div class="ml-4 mt-3">
+
                                 <div class="justify-between">
-                                        <p class="text-gray-800 text-md text-justify mb-2">
-                                        Soy ingeniero de sistemas, con conocimientos y experiencia en el desarrollo de aplicaciones web. Las tecnologias que utilizo para mis desarrollos son las siguientes: <br><br>
-                                        -Lenguaje backend : PHP. <br>
-                                        -Lenguaje Fronted: Javascript. <br>
-                                        -Framework Backend: Laravel. <br>
-                                        -Framework Fronted: Vuejs y Livewire con Alpine js. <br>
-                                        -Librerias de estilos css: Bootstrap y Tailwind css. <br>
-                                        -Sistema de gestion de bases de datos: Mysql. <br>
+                                        <p class="text-green-800 text-justify text-xl  mb-2">
+                                        Soy Ingeniero de Sistemas, con experiencia en diseño, desarrollo, instalación, pruebas y mantenimiento de aplicaciones web. Las tecnologias y/o lenguajes que actualmente utilizo son PHP, Javascript, Laravel, Vuejs, Livewire con Alpine js, Bootstrap, Tailwind css, y sistemas de gestión de base de datos como Mysql.
+                                        </p>
+                                        <br>
+
+                                       
+                                        <p class="text-green-800 text-justify text-xl mb-2">
+                                        Me encuentro constantemente investigando, y practicando nuevas tecnologías a fin de ampliar mis conocimientos. Me considero una persona proactiva, perseverante, ordenada, metódica, y con disposición para la comunicación y el trabajo en equipo.
                                         </p>
                                 </div>
                                     
                             </div>
                     </div>
-                    <hr>
+                    <!-- <hr>
                     <div class="p-2 flex items-center">
                             <span class="flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2">
                                 <i class="fas fa-graduation-cap text-2xl text-white"></i>
@@ -59,9 +56,9 @@
                             </div>
                     </div>
 
-                    <hr>
+                    <hr> -->
 
-                    <div class="p-2 flex items-center">
+                    <!-- <div class="p-2 flex items-center">
                             <span class="flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2">
                                 <i class="fas fa-briefcase text-2xl text-white"></i>
                             </span>
@@ -86,8 +83,8 @@
                                 </div>
                             </div>
                     </div>
-                    <hr>
-                    <div class="p-2 flex items-center">
+                    <hr> -->
+                    <!-- <div class="p-2 flex items-center">
                             <span class="flex items-center justify-center h-10 w-10 rounded-full bg-green-900 p-2">
                                 <i class="fas fa-book-reader text-2xl text-white"></i>
                             </span>
@@ -197,7 +194,7 @@
                                 </div>
 
                             </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
